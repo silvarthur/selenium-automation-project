@@ -8,7 +8,6 @@ public class HomePage extends BasePage {
 
     private By burgerMenuButtonBy = By.id("react-burger-menu-btn");
     private By logoutSidebarButtonBy = By.id("logout_sidebar_link");
-    private By errorMessageContainerBy = By.cssSelector(".error-message-container.error");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -18,9 +17,5 @@ public class HomePage extends BasePage {
     public void logout() {
         clickOnElement(burgerMenuButtonBy);
         clickOnElement(logoutSidebarButtonBy);
-    }
-
-    public String getErrorMessage() {
-        return driver.findElement(errorMessageContainerBy).getText();
     }
 }

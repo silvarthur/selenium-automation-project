@@ -10,6 +10,8 @@ public class LoginPage extends BasePage {
     private By passwordFieldBy = By.id("password");
     private By confirmLoginButtonBy = By.id("login-button");
 
+    private By errorMessageContainerBy = By.cssSelector(".error-message-container.error");
+
     public LoginPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
@@ -20,5 +22,9 @@ public class LoginPage extends BasePage {
         sendKeyToAnElement(passwordFieldBy, password);
 
         clickOnElement(confirmLoginButtonBy);
+    }
+
+    public String getErrorMessage() {
+        return driver.findElement(errorMessageContainerBy).getText();
     }
 }

@@ -15,20 +15,27 @@ public class LoginTest extends BaseTest {
     public void loginIncorrectPassword() {
         loginPage.login("standard_user", "incorrect_password");
 
-        assertEquals(INCORRECT_PASSWORD_ERROR_MESSAGE, homePage.getErrorMessage());
+        assertEquals(INCORRECT_PASSWORD_ERROR_MESSAGE, loginPage.getErrorMessage());
+    }
+
+    @Test
+    public void loginWithUnregisteredUser() {
+        loginPage.login("unregistered_user", "secret_sauce");
+
+        assertEquals(UNREGISTERED_USER_ERROR_MESSAGE, loginPage.getErrorMessage());
     }
 
     @Test
     public void loginPasswordRequired() {
         loginPage.login("standard_user", "");
 
-        assertEquals(PASSWORD_REQUIRED_ERROR_MESSAGE, homePage.getErrorMessage());
+        assertEquals(PASSWORD_REQUIRED_ERROR_MESSAGE, loginPage.getErrorMessage());
     }
 
     @Test
     public void loginLockedOutUser() {
         loginPage.login("locked_out_user", "secret_sauce");
 
-        assertEquals(LOCKED_OUT_USER_ERROR_MESSAGE, homePage.getErrorMessage());
+        assertEquals(LOCKED_OUT_USER_ERROR_MESSAGE, loginPage.getErrorMessage());
     }
 }
