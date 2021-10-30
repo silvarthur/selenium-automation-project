@@ -14,7 +14,7 @@ public class BaseTest {
 
     @BeforeAll
     public static void before() {
-        driver = BrowserManager.getDriver("firefox");
+        driver = BrowserManager.getDriver(System.getProperty("browser"));
 
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);

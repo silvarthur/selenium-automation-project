@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.jupiter.api.Test;
-import pageobjects.HomePage;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static utils.Constants.*;
