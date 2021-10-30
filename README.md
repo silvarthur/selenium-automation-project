@@ -27,3 +27,8 @@ mvn clean test site -Dbrowser=firefox
 
 You can also execute the command above passing chrome as the option for the browser. To
 open the test execution report directly, open the file target/site/surefire-report.html.
+
+## Saving Test Evidences
+
+Whenever a test fails a screenshot is taken and saved in the src/test/screenshot folder.
+The format of the image file is .png.
