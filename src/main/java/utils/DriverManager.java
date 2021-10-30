@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BrowserManager {
+public class DriverManager {
     public static WebDriver getDriver(String browserName) {
         if (browserName.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chrome/chromedriver");

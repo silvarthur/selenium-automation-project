@@ -1,10 +1,10 @@
 package tests;
 
-import org.junit.jupiter.api.*;
-import org.openqa.selenium.WebDriver;
+import utils.DriverManager;
 import pageobjects.HomePage;
 import pageobjects.LoginPage;
-import utils.BrowserManager;
+import org.junit.jupiter.api.*;
+import org.openqa.selenium.WebDriver;
 
 public class BaseTest {
     private static WebDriver driver;
@@ -13,20 +13,20 @@ public class BaseTest {
     protected static HomePage homePage;
 
     @BeforeAll
-    public static void before() {
-        driver = BrowserManager.getDriver(System.getProperty("browser"));
+    public static void initAll() {
+        driver = DriverManager.getDriver(System.getProperty("browser"));
 
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
     }
 
     @BeforeEach
-    public void beforeEach() {
+    public void init() {
         driver.get("https://www.saucedemo.com/");
     }
 
     @AfterAll
-    public static void afterAll() {
+    public static void tearDownAll() {
         driver.quit();
     }
 }

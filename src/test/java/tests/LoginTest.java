@@ -1,18 +1,24 @@
 package tests;
 
+import utils.MyTestWatcher;
+import java.io.IOException;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.RegisterExtension;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static utils.Constants.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoginTest extends BaseTest {
+    @RegisterExtension
+    MyTestWatcher testWatcher = new MyTestWatcher(loginPage.getDriver());
+
     @Test
     public void loginSuccessfully() {
         loginPage.login("standard_user", "secret_sauce");
     }
 
     @Test
-    public void loginIncorrectPassword() {
+    public void loginIncorrectPassword() throws IOException {
         loginPage.login("standard_user", "incorrect_password");
 
         assertEquals(INCORRECT_PASSWORD_ERROR_MESSAGE, loginPage.getErrorMessage());

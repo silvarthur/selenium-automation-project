@@ -1,11 +1,10 @@
 package pageobjects;
 
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class BasePage {
     WebDriver driver;
@@ -24,5 +23,9 @@ public class BasePage {
     public void sendKeyToAnElement(By by, String input) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
         driver.findElement(by).sendKeys(input);
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }
