@@ -14,7 +14,8 @@ public class BaseTest {
 
     @BeforeAll
     public static void initAll() {
-        driver = DriverManager.getDriver(System.getProperty("browser"));
+        DriverManager driverManager = new DriverManager(System.getProperty("browser"));
+        driver = driverManager.getDriver();
 
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
