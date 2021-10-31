@@ -15,6 +15,8 @@ public class LoginTest extends BaseTest {
     @Test
     public void loginSuccessfully() {
         loginPage.login("standard_user", "secret_sauce");
+
+        assertEquals(HOME_PAGE_URL, loginPage.getDriver().getCurrentUrl());
     }
 
     @Test
