@@ -14,7 +14,7 @@ file must be updated. The part of code that has to be updated is right below:
 
 ## Executing The Test Project
 
-The test cases can be executed using Chrome or Firefox.
+The test cases can be executed using Chrome or Firefox. 
 
 Executing with Chrome:
 ```bash
@@ -26,6 +26,10 @@ mvn clean test -Dbrowser=firefox
 ```bash
 mvn clean test -Dbrowser=firefox
 ```
+
+You can use either macOS or Linux to execute the tests. No information about the OS
+must be provided in the execution command because the OS that is being used can be
+identified during test execution.
 
 ## Generating Reports Using Maven
 
