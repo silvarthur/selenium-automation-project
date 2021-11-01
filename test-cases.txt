@@ -1,0 +1,98 @@
+TEST CASES
+
+-----------------------------------------------------------------------------------
+USER CAN LOGIN SUCCESSFULLY
+-----------------------------------------------------------------------------------
+1. Enter a valid username;
+2. Enter a valid password;
+3. Click on the login button.
+
+EXPECTED RESULTS: User should login. The home page should be displayed.
+
+-----------------------------------------------------------------------------------
+USER WHO HAS NOT SIGNED UP TRIES TO LOGIN
+-----------------------------------------------------------------------------------
+1. Enter a username that belongs to no user registered;
+2. Enter a valid password;
+3. Click on the login button.
+
+EXPECTED RESULTS: User should not login. An error message should be displayed.
+
+-----------------------------------------------------------------------------------
+USER PROVIDES AN INCORRECT PASSWORD
+-----------------------------------------------------------------------------------
+1. Enter a valid username;
+2. Enter an incorrect password;
+3. Click on the login button.
+
+EXPECTED RESULTS: User should not login. An error message should be displayed.
+
+-----------------------------------------------------------------------------------
+USER LEAVES AN EMPTY FIELD AND TRIES TO LOGIN
+-----------------------------------------------------------------------------------
+SCENARIO 1
+
+1. Enter a valid username;
+2. Leave the password field empty;
+3. Click on the login button.
+
+SCENARIO 2
+
+1. Leave the username field empty;
+2. Enter a valid password;
+3. Click on the login button.
+
+SCENARIO 3
+
+1. Leave both username and password fields empty;
+2. Click on the login button.
+
+EXPECTED RESULTS: User should not login. An error message should be displayed.
+
+-----------------------------------------------------------------------------------
+LOCKED UP USER TRIES TO LOGIN
+-----------------------------------------------------------------------------------
+1. Enter an username that belongs to a locked out user;
+2. Enter a valid password;
+3. Click on the login button.
+
+EXPECTED RESULTS: User should not login. An error message should be displayed.
+
+-----------------------------------------------------------------------------------
+VERIFY IF THE USER IS FORBIDDEN TO ACCESS URLS THAT REQUIRE LOGIN BEFORE LOGGING IN
+-----------------------------------------------------------------------------------
+1. Try to access any URL that requires login.
+
+EXPECTED RESULTS: User should no be able visualize any information on page.
+
+-----------------------------------------------------------------------------------
+CHECK IF THE FIELDS HIDES THE USER INPUT
+-----------------------------------------------------------------------------------
+1. Enter a valid password.
+2. Verify how the password is displayed on the field.
+
+EXPECTED RESULTS: The user should no be able to see what was typed on the field.
+
+-----------------------------------------------------------------------------------
+USERS WITH DIFFERENT CREDENTIALS CAN LOGIN SIMULTANEOUSLY IN DIFFERENT BROWSERS
+-----------------------------------------------------------------------------------
+1. Login with an the first user;
+2. Open a different browser;
+3. Try to login with the second user.
+4.
+
+EXPECTED RESULTS: Both users should be able to login successfully.
+
+-----------------------------------------------------------------------------------
+VERIFY TIME TAKEN FOR AN USER TO LOGIN SUCCESSFULLY (PERFORMANCE)
+-----------------------------------------------------------------------------------
+1. Using any tool to measure the time taken for an user to login.
+
+EXPECTED RESULTS: The time taken to login should be acceptable.
+
+-----------------------------------------------------------------------------------
+VERIFY APPLICATION BEHAVIOUR IN DIFFERENT BROWSERS (COMPATIBILITY)
+-----------------------------------------------------------------------------------
+1. Login in different browsers.
+
+EXPECTED RESULTS: The user should be able to login successfully in all the browsers.
