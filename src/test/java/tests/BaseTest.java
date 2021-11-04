@@ -6,6 +6,8 @@ import pageobjects.LoginPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
+import static utils.Constants.*;
+
 public class BaseTest {
     private static WebDriver driver;
 
@@ -23,7 +25,7 @@ public class BaseTest {
 
     @BeforeEach
     public void init() {
-        driver.get("https://www.saucedemo.com/");
+        driver.get(LOGIN_PAGE_URL);
     }
 
     @AfterAll

@@ -8,7 +8,7 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 import static utils.Constants.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginTest extends BaseTest {
+public class LoginPageTest extends BaseTest {
     @RegisterExtension
     MyTestWatcher testWatcher = new MyTestWatcher(loginPage.getDriver());
 
