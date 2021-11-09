@@ -8,4 +8,5 @@ public final class Constants {
 
     public static final String LOGIN_PAGE_URL = "https://www.saucedemo.com/";
     public static final String HOME_PAGE_URL = "https://www.saucedemo.com/inventory.html";
+    public static final String CHECKOUT_COMPLETE_URL = "https://www.saucedemo.com/checkout-complete.html";
 }

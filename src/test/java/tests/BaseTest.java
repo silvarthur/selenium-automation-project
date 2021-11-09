@@ -1,8 +1,7 @@
 package tests;
 
+import pageobjects.*;
 import utils.DriverManager;
-import pageobjects.HomePage;
-import pageobjects.LoginPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 
@@ -13,6 +12,9 @@ public class BaseTest {
 
     protected static LoginPage loginPage;
     protected static HomePage homePage;
+    protected static ShoppingCartPage shoppingCartPage;
+    protected static CheckoutStepOnePage checkoutStepOnePage;
+    protected static CheckoutStepTwoPage checkoutStepTwoPage;
 
     @BeforeAll
     public static void initAll() {
@@ -21,6 +23,9 @@ public class BaseTest {
 
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
+        shoppingCartPage = new ShoppingCartPage(driver);
+        checkoutStepOnePage = new CheckoutStepOnePage(driver);
+        checkoutStepTwoPage = new CheckoutStepTwoPage(driver);
     }
 
     @BeforeEach
